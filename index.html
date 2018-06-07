@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RoundForest Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="MainApp">
+    <div class="main_container" ng-controller="MainController">
+        <!-- row -->
+        <div class="row_container"  ng-repeat="(key, value) in dataList">
+            <!-- Left Side -->
+            <div class="left_container">
+                <div class="prime_item" >
+                    <div class="item_label" style="background-color: #f66;">
+                        <span style="text-align: center; margin-top: 5px;">{{value[0].discount}} Off</span>
+                    </div>
+                    <div class="item_image">
+                        <img src="img/blender.jpg" class="img_prime" alt="">
+                    </div>
+                    <div class="item_price">
+                        <div class="text_price">
+                            <span>{{value[0].price}}</span>
+                            <span class="original_price strikethrough">{{value[0].originalPrice}}</span>
+                            
+                        </div>
+                        <div class="prime_origin">
+                            <span style="right: 15px; position: absolute;">{{value[0].origin}}</span>
+                        </div>
+                    </div>
+                    <div class="item_desc">
+                        <div class="text-overflow text-style prime_text">
+                            <span>{{value[0].description}}</span>
+                        </div>
+                    </div>
+                    <div class="item_options text-style">
+                        <div>
+                            <span>{{value[0].shippingPrice}}</span>
+                        </div>
+                        <div>
+                            <span>{{value[0].state}}</span>
+                        </div>
+                        <div>
+                            <span>{{value[0].timeLeft}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="right_container">
+                <div class="right_upper">
+                        <div class="normal_item" ng-if="value[1] !== undefined">
+                                <div class="item_label" style="background-color: #ff931d;">
+                                        <span style="text-align: center; margin-top: 5px;">{{value[1].discount}} Off</span>
+                                </div>
+                                <div class="item_desc">
+                                        <div class="text-overflow text-style" style="width: 45%;position:absolute;">
+                                                <span>{{value[1].description}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_image">
+                                        <img src="img/garlicSqeezer.jpg" class="normal_image" alt="">
+                                </div>
+                                <div class="item_price">
+                                        <div class="text_price" style="position:absolute;">
+                                            <span>{{value[1].price}}</span>
+                                            <span class="original_price strikethrough">{{value[1].originalPrice}}</span>
+                                        </div>
+                                        <div class="prime_origin">
+                                             <span style="right: 15px; position: absolute;">{{value[1].origin}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_options text-style">
+                                        <div>
+                                            <span>{{value[1].state}}</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="normal_item" ng-if="value[2] !== undefined">
+                                <div class="item_label" style="background-color: #ff931d;">
+                                        <span style="text-align: center; margin-top: 5px;">{{value[2].discount}} Off</span>
+                                </div>
+                                <div class="item_desc">
+                                        <div class="text-overflow text-style" style="width: 45%;position:absolute;">
+                                                <span>{{value[2].description}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_image">
+                                        <img src="img/garlicSqeezer.jpg" class="normal_image" alt="">
+                                </div>
+                                <div class="item_price">
+                                        <div class="text_price" style="position:absolute;">
+                                            <span>{{value[2].price}}</span>
+                                            <span class="original_price strikethrough">{{value[2].originalPrice}}</span>
+                                        </div>
+                                        <div class="prime_origin">
+                                             <span style="right: 15px; position: absolute;">{{value[2].origin}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_options text-style">
+                                        <div>
+                                            <span>{{value[2].state}}</span>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="right_lower">
+                        <div class="normal_item" ng-if="value[3] !== undefined">
+                                <div class="item_label" style="background-color: #ffbe17;">
+                                        <span style="text-align: center; margin-top: 5px;">{{value[3].discount}} Off</span>
+                                </div>
+                                <div class="item_desc">
+                                        <div class="text-overflow text-style" style="width: 45%;position:absolute;">
+                                                <span>{{value[3].description}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_image">
+                                        <img src="img/garlicSqeezer.jpg" class="normal_image" alt="">
+                                </div>
+                                <div class="item_price">
+                                        <div class="text_price" style="position:absolute;">
+                                            <span style="color:#ffbe17">{{value[3].price}}</span>
+                                            <span class="original_price strikethrough">{{value[3].originalPrice}}</span>
+                                        </div>
+                                        <div class="prime_origin">
+                                             <span style="right: 15px; position: absolute;">{{value[3].origin}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_options text-style">
+                                        <div>
+                                            <span>{{value[3].state}}</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="normal_item" ng-if="value[4] !== undefined">
+                                <div class="item_label" style="background-color: #ffbe17;">
+                                        <span style="text-align: center; margin-top: 5px;">{{value[4].discount}} Off</span>
+                                </div>
+                                <div class="item_desc">
+                                        <div class="text-overflow text-style" style="width: 45%;position:absolute;">
+                                                <span>{{value[4].description}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_image">
+                                        <img src="img/garlicSqeezer.jpg" class="normal_image" alt="">
+                                </div>
+                                <div class="item_price">
+                                        <div class="text_price" style="position:absolute;">
+                                            <span style="color:#ffbe17">{{value[4].price}}</span>
+                                            <span class="original_price strikethrough">{{value[4].originalPrice}}</span>
+                                        </div>
+                                        <div class="prime_origin">
+                                             <span style="right: 15px; position: absolute;">{{value[4].origin}}</span>
+                                        </div>
+                                </div>
+                                <div class="item_options text-style">
+                                        <div>
+                                            <span>{{value[4].state}}</span>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="productService.js"></script>
+</body>
+</html>
